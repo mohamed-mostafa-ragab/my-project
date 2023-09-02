@@ -1,0 +1,43 @@
+<!-- <div class="card" style="width: 18rem; " *ngFor=" let product of allProduct " height="15%">
+    <img class="card-img-top" src="{{selactedproduct.image}}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{selactedproduct.title}}</h5>
+        <p class="card-text" *ngIf="selactedproduct.showDetials">{{product.description}}
+        </p>
+        <h3>{{selactedproduct.price}}</h3>
+        <h4>{{selactedproduct.category}}</h4>
+   
+    </div>
+</div> -->
+<div class="movie-ticket">
+    <div class="container-fluid">
+        <div class="ui-item">
+            <div class="ui-head">
+                <img src="{{selactedproduct.image}}" alt=""
+                    class="img-responsive bg-img" />
+
+                <div class="ui-trans clearfix">
+                    <!-- <img src=" {{selactedproduct.image}}" class="card-img-top" alt="..." /> -->
+
+                    <div class="ui-details clearfix">
+                        <h2>
+                            <a href="#">{{ selactedproduct?.title }}</a>
+                        </h2>
+
+                        <p>
+                            {{ selactedproduct?.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        
+
+
+
+                <a href="#" class="ui-btn bg-red"><i class="fa fa-ticket"></i> Buy now</a>
+                <a href="#" class="ui-btn bg-green"><i class="fa fa-dot-circle-o"></i> Buy later</a>
+           
+        </div>
+    </div>
+</div>

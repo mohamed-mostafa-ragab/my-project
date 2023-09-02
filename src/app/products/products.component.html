@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem; " *ngFor = " let product of allProduct " height="15%">
+<a [routerLink]="['/productsdetails', product.id ]">
+    <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text" *ngIf="product.showDetials">{{product.description}}
+           </p>
+           <h3>{{product.price}}</h3>
+           <h4>{{product.category}}</h4>
+        
+        <button class="btn btn-primary" (click)="hide1(product.id)">Show/Hide</button>
+    </div>
+</div>
