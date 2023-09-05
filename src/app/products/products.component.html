@@ -1,14 +1,24 @@
+<div class="col">
+    <button class="btn btn-outline-success my-2 my-sm-0 float-end" (click)="changeLanguage()">
+        {{ language }}
+    </button>
+    <mat-paginator [length]="totalMovies" [pageSize]="pageSize"
+     aria-label="Select page" (page)=" changePage ($event) ">
+    </mat-paginator>
+</div>
+
 <div class="card" style="width: 18rem; " *ngFor = " let product of allProduct " height="15%">
 <a [routerLink]="['/productsdetails', product.id ]">
-    <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+    <img class="card-img-top" src="{{ imagePath + product.poster_path  }}" alt="Card image cap">
     </a>
     <div class="card-body">
-        <h5 class="card-title">{{product.title}}</h5>
-        <p class="card-text" *ngIf="product.showDetials">{{product.description}}
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text" *ngIf="product.showDetials">{{product.overview}}
            </p>
-           <h3>{{product.price}}</h3>
-           <h4>{{product.category}}</h4>
+           <h3>{{product.vote_count}}</h3>
+           <h4> {{product.vote_average}} \ 10</h4>
         
-        <button class="btn btn-primary" (click)="hide1(product.id)">Show/Hide</button>
+        <!-- <button class="btn btn-primary"vote_count (click)="hide1(product.id)">Show/Hide</button> -->
+   
     </div>
 </div>
